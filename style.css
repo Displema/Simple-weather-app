@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #010440;
+    --secondary-color: #BF9004;
+    --third-color: #8C3B0D;
+}
+
+body {
+    background-color: #919191;
+    font-family: 'Karla', sans-serif;
+}
+.toolkit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    width: 100vw;
+    background-color: var(--main-color);
+}
+
+.toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.2em .5em;
+    border-radius: 0.5em;
+    position: relative;
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.toggler div {
+    margin: 0 0.2em;
+    z-index: 1;
+    padding: 0.1em 0.2em;
+    cursor: pointer;
+}
+
+.toggler .f.selected::after {
+    content: '';
+    position: absolute;
+    background-color:var(--third-color);
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0.1em 0.1em;
+    top: 3px;
+    left: 11px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.toggler .c.selected::after {
+    content: '';
+    position: absolute;
+    background-color: var(--third-color);
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0.1em 0.1em;
+    top: 3px;
+    right: 10px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.search {
+    margin-left: auto;
+    margin-right: -1em;
+    position: relative;
+}
+
+.search input {
+    padding: 0.4em 0.5em;
+}
+
+.search ion-icon {
+    position: absolute;
+    top: 0.25em;
+    right: 0.3em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
